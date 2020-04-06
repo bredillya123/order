@@ -1,0 +1,207 @@
+.back {
+    display: flex;
+    justify-content: center;
+    background: url('../images/2.png') no-repeat 50% 0%;
+    background-size: 150vh;
+    
+}
+
+.order {
+    margin-top: 50px;
+    background: url('../images/fon1.png') no-repeat 100%;
+    width: 805px;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+    &__fon {
+        width: 686px;
+        height: 391px;
+        border-radius: 10px;
+        box-shadow: 0 0 65px 0 rgba(0, 0, 0, 0.82);
+        background-color: #111a28;
+    }
+
+    &__select {
+        display: flex;
+        margin-bottom: 30px;
+    }
+}
+
+
+
+.main-block {
+    display: flex;
+    justify-content: space-around;
+
+    &__slider {
+        width: 350px;
+    }
+    &__info {
+        width: 200px;
+    }
+}
+
+.title__caption {
+    font-size: 24px;
+    font-weight: 100;
+    color: #e1e1e1;
+}
+
+.title__subtitle {
+    font-size: 14px;
+    font-weight: 100;
+    color: rgba(225, 225, 225, 0.54);
+}
+
+.select__size {
+    margin-right: 3px;
+}
+
+.select__box {
+    width: 69px;
+    height: 32px;
+    opacity: 0.26;
+    border: solid 1px #ffffff;
+    background-color: #111a28;
+    font-size: 14px;
+    font-weight: 100;
+    text-align: center;
+    line-height: 1.29;
+    color: #e1e1e1;
+}
+
+.box-button {
+    font-size: 14px;
+    font-weight: 100;
+}
+
+
+.button {
+    width: 184px;
+    height: 40px;
+    opacity: 0.26;
+    border: solid 1px #ffffff;
+    background-color: #4c525a;
+    text-align: center;
+    color: #e1e1e1;
+}
+
+
+
+.rating_block {
+    width: 60px;
+    height: 12px;
+    margin-bottom: 25px;
+    
+    
+    
+  }
+  .rating_block input[type="radio"] {
+    display: none;
+  }
+  .label_rating {
+    float: right;
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url(../images/grey.png) no-repeat 50% 0;
+    z-index: 1;
+    cursor: pointer;
+  }
+  /*Пишем правила смены положения background-а*/
+  .rating_block .label_rating:hover, /*Правило для ховера на текущий лейбл*/
+  .rating_block .label_rating:hover ~ .label_rating, /*Правило для всех следующих лейблов по DOM дереву*/
+  .rating_block input[type="radio"]:checked ~ .label_rating /*Правило для всех следующих лейблов после выбранного инпута, чтобы звездочки как бы зафиксировались*/
+  {
+    background: url(../images/yelow.png); 
+    background-position: 50% -12px;
+  }
+
+  .slider {
+      margin-top: 50px;
+      width: 329px;
+      height: 169px;
+      overflow: hidden;
+  }
+
+  .navigation {
+      position: absolute;
+      
+      transform: translateX(-50%);
+      display: flex;
+      margin-left: 192px;
+      margin-top: 50px;
+  }
+
+.bar {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 6px;
+    cursor: pointer;
+    opacity: 80%;
+    transition: .4s;
+}
+
+.bar-grey {
+    background: #1f273f;
+}
+
+.bar-white {
+    background: #fff;
+}
+
+.bar-red {
+    background: #ed3333;
+}
+
+.bar-blue {
+    background: #29e3ea;
+}
+
+.bar:hover {
+    border: 2px solid grey;
+    opacity: 100%;
+    transform: scale(1.1);
+}
+
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+
+.slide {
+
+    width: 25%;
+    transition: .6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+
+#r2:checked ~ .s1 {
+    margin-left: -25%;
+}
+
+#r3:checked ~ .s1 {
+    margin-left: -50%;
+}
+
+#r4:checked ~ .s1 {
+    margin-left: -75%;
+}
